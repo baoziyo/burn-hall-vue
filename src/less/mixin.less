@@ -1,0 +1,28 @@
+.ellipsis(@line) when (@line > 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+.clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.fix-padding(@width: 24px) {
+  padding-left: @width;
+  padding-right: @width;
+  margin-left: -@width;
+  margin-right: -@width;
+}
