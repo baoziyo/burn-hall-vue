@@ -4,6 +4,5 @@
  * Author: Ogg <baoziyoo@gmail.com>
  */
 
-export const filterHtml = (text) => {
-  return text.replace(/<[^>]*>/g, '');
-}
+import '@/less/global.less';
+import '@/less/common/index.less';

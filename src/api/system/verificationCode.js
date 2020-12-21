@@ -7,10 +7,9 @@
 import {prefix} from '@/api/config';
 import request from '@/api/request';
 
-export const searchUsers = params => {
+export const getVerificationCode = () => {
   return request({
-    url: `${prefix}/user/user`,
+    url: `${prefix}/system/verification_code`,
     method: 'GET',
-    params: params,
   })
 }

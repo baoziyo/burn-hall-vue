@@ -1,0 +1,51 @@
+/**
+ * Sunny 2020/12/22 上午12:02
+ * ogg sit down and start building bugs.
+ * Author: Ogg <baoziyoo@gmail.com>
+ */
+
+.layout-container {
+  min-height: 100% !important;
+
+  .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+  }
+
+  .ant-layout-sider {
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+  }
+
+  .ant-layout {
+    margin-left: 200px;
+  }
+
+  .layout-header {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    position: fixed;
+    box-shadow: 2px 2px 5px #ccc;
+
+    .user {
+      position: absolute;
+      right: 250px;
+      line-height: 60px;
+    }
+  }
+
+  .ant-layout-content {
+    margin: 70px 16px 0;
+
+    .layout-content {
+      padding: 24px;
+      background: #fff;
+      margin-top: 10px;
+      min-height: calc(100% - 50px);
+    }
+  }
+}

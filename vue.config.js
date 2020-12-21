@@ -1,3 +1,9 @@
+/**
+ * Sunny 2020/12/22 上午12:02
+ * ogg sit down and start building bugs.
+ * Author: Ogg <baoziyoo@gmail.com>
+ */
+
 const path = require("path");
 const CompressionPlugin = require('compression-webpack-plugin');
 const resolve = dir => path.resolve(__dirname, dir);
@@ -24,7 +30,7 @@ module.exports = {
     sourceMap: process.env.VUE_APP_ENV !== 'production',
     loaderOptions: {
       less: {
-        javascriptEnabled: true
+        javascriptEnabled: true,
       }
     }
   },
@@ -48,7 +54,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [
-        resolve('./src/styles/mixin.less'),
+        resolve('./src/less/mixin.less'),
       ]
     }
   }
