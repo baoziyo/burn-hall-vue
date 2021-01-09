@@ -25,6 +25,16 @@ import {
   Col,
   Row,
   Table,
+  Pagination,
+  BackTop,
+  Empty,
+  Tag,
+  Badge,
+  Tooltip,
+  Descriptions,
+  Switch,
+  Tree,
+  Popconfirm,
 } from 'ant-design-vue';
 
 Vue.use(Button);
@@ -45,6 +55,16 @@ Vue.use(Spin);
 Vue.use(Col);
 Vue.use(Row);
 Vue.use(Table);
+Vue.use(Pagination);
+Vue.use(BackTop);
+Vue.use(Empty);
+Vue.use(Tag);
+Vue.use(Badge);
+Vue.use(Tooltip);
+Vue.use(Descriptions);
+Vue.use(Switch);
+Vue.use(Tree);
+Vue.use(Popconfirm);
 
 Vue.prototype.$message = message;
 Vue.prototype.$confirm = Modal.confirm;

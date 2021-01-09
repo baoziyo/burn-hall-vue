@@ -5,7 +5,7 @@
   -->
 
 <template>
-  <a-config-provider :locale="zh_CN" id="app">
+  <a-config-provider :locale="zh_CN" id="app" v-cloak>
     <router-view/>
   </a-config-provider>
 </template>

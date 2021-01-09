@@ -11,13 +11,23 @@ Vue.use(Router);
 
 const routes = [
   {
-    path: '',
+    path: '/',
     component: () => import('@/views/Index'),
     children: [
       {
-        path: '/user',
+        path: 'user',
         name: 'userList',
         component: () => import('@/views/User/User/User'),
+      },
+      {
+        path: 'user/group',
+        name: 'groupList',
+        component: () => import('@/views/User/Group/Group'),
+      },
+      {
+        path: 'system/job',
+        name: 'systemJob',
+        component: () => import('@/views/System/Job/Job'),
       },
     ]
   },

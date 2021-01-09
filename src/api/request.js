@@ -5,7 +5,7 @@
  */
 
 import axios from 'axios';
-import Router from '@/router/index'
+import {message} from 'ant-design-vue';
 
 const axiosConfig = {
   baseURL: process.env.NODE_ENV === 'production' ? '' : '/api',
@@ -30,18 +30,12 @@ service.interceptors.request.use(config => {
 // 响应拦截器,例如判断服务器返回的状态，400，500
 service.interceptors.response.use(
   response => {
-    if (response.status === 200) {
-      return Promise.resolve(response.data)
-    } else {
-      return Promise.reject(response)
-    }
+    return Promise.resolve(response.data)
   },
   error => {
-    if (error.response.status === 403) {
-      Router.push({name: '403'});
-    } else {
-      return Promise.reject(error)
-    }
+    message.error(error.response.data.message);
+
+    return Promise.reject(error.response);
   }
 )
 

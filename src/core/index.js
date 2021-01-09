@@ -4,8 +4,13 @@
  * Author: Ogg <baoziyoo@gmail.com>
  */
 
+import Vue from 'vue';
 import '@/core/loadPrototype';
 import '@/core/loadFilter';
 import '@/core/loadAntDesign';
 import '@/core/vueConfig';
 import '@/core/loadLess';
+
+
+import IconFont from '@/icon/index';
+Vue.use(IconFont);

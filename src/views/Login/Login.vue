@@ -11,13 +11,18 @@
         <h1>Login</h1>
         <a-form-model :label-col="{span:10}" :wrapper-col="{span:5}">
           <a-form-model-item label="用户名">
-            <a-input placeholder="请输入账号"/>
+            <a-input placeholder="请输入账号">
+              <a-icon slot="prefix" type="user"/>
+            </a-input>
           </a-form-model-item>
           <a-form-model-item label="密码">
-            <a-input placeholder="请输入密码" type="password"/>
+            <a-input placeholder="请输入密码" type="password">
+              <a-icon slot="prefix" type="key" />
+            </a-input>
           </a-form-model-item>
           <a-form-model-item label="验证码">
             <a-input placeholder="请输入验证码" :maxLength="4">
+              <a-icon slot="prefix" type="lock" />
               <div slot="addonAfter" style="min-width:80px;">
                 <a-spin :spinning="verificationCodeLoading">
                   <img class="verification-code-img" :src="verificationCodeImg" @click="getVerificationCode()">
@@ -60,7 +65,7 @@ export default {
       try {
         const response = await getVerificationCode();
         this.verificationCodeLoading = false;
-        this.verificationCodeImg = response.data.img;
+        this.verificationCodeImg = response.img;
       } finally {
         this.verificationCodeLoading = false;
       }

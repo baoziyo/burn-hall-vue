@@ -87,6 +87,7 @@
         </a-breadcrumb>
         <div class="layout-content">
           <router-view/>
+          <a-back-top :visibilityHeight="100"/>
         </div>
       </a-layout-content>
     </a-layout>
